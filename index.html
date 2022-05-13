@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dropdown Navigation Menu</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Epilogue" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <!-- Mobile menu -->
+    <div class="mobile-menu">
+      <div class="menu-btn" id="menuBtn">
+        <img
+          src="images/icon-close-menu.svg"
+          alt="menu btn"
+          style="cursor: pointer"
+          class="close-icon"
+          id="closeBtn"
+          onclick="showMobileMenu()"
+        />
+      </div>
+      <ul class="mobile-list">
+        <li id="mobileFeatures" onclick="showMobileFeaturesDropDown()">
+          Features
+          <img
+            src="images/icon-arrow-down.svg"
+            class="down-arrow"
+            alt="down arrow"
+            id="mobileFeaturesArrow"
+          />
+          <ul class="mobile-features-dropdown hide">
+            <li>
+              <img src="images/icon-todo.svg" alt="todo icon" /> Todo List
+            </li>
+            <li>
+              <img src="images/icon-calendar.svg" alt="calender icon" />Calender
+            </li>
+            <li>
+              <img
+                src="images/icon-reminders.svg"
+                alt="reminder icon"
+              />Reminders
+            </li>
+            <li>
+              <img src="images/icon-planning.svg" alt="planning icon" />Planning
+            </li>
+          </ul>
+        </li>
+        <li id="mobileCompany" onclick="showMobileCompanyDropdown()">
+          Company
+          <img
+            src="images/icon-arrow-down.svg"
+            id="mobileCompanyArrow"
+            alt="down arrow"
+          />
+          <ul class="mobile-company-dropdown hide">
+            <li>History</li>
+            <li>Our Team</li>
+            <li>Blog</li>
+          </ul>
+        </li>
+        <li>Careers</li>
+        <li>About</li>
+      </ul>
+      <ul class="bottom-list">
+        <li>Login</li>
+        <li><a href="#" class="mobile-register-btn">Register</a></li>
+      </ul>
+    </div>
+    <nav class="nav-container">
+      <div class="logo">
+        <img src="images/logo.svg" alt="Logo" />
+      </div>
+      <ul class="nav-list-left">
+        <div class="links-left">
+          <li class="links" id="features">
+            <a href="#" onClick="showDropDown()"
+              >Features
+              <img
+                src="images/icon-arrow-down.svg"
+                class="icons"
+                alt="arrow down"
+                id="arrowDown"
+            /></a>
+          </li>
+
+          <li class="links" id="company">
+            <a href="#" onclick="showCompanyDropDown()"
+              >Company
+              <img
+                src="images/icon-arrow-down.svg"
+                class="icons"
+                alt="arrow down"
+                id="companyArrow"
+            /></a>
+          </li>
+          <li class="links"><a href="#">Careers</a></li>
+          <li class="links"><a href="#">About</a></li>
+        </div>
+      </ul>
+      <ul class="nav-list-right">
+        <div class="links-right">
+          <li><a href="#">Login</a></li>
+          <li>
+            <a class="register-btn">
+              <span class="register-text">Register</span>
+            </a>
+          </li>
+        </div>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <div class="left-section">
+        <h1 class="title">Make <br />remote work</h1>
+        <p class="paragraph">
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+        </p>
+        <button class="learn-more-btn">Learn More</button>
+        <div class="sponsor-section">
+          <img src="images/client-databiz.svg" alt="databiz" />
+          <img src="images/client-audiophile.svg" alt="audiophile" />
+          <img src="images/client-meet.svg" alt="meet" />
+          <img src="images/client-maker.svg" alt="maker" />
+        </div>
+      </div>
+      <div class="right-section">
+        <img src="images/image-hero-desktop.png" alt="hero image" />
+      </div>
+    </div>
+    <div class="mobile-container" id="mobileContainer">
+      <div class="mobile-nav">
+        <img src="images/logo.svg" alt="logo" />
+        <img
+          src="images/icon-menu.svg"
+          alt="menu icon"
+          id="mobileMenuBtn"
+          style="float: right; cursor: pointer"
+          onclick="showMobileMenu()"
+        />
+      </div>
+      <img
+        src="images/image-hero-mobile.png"
+        alt="hero mobile image"
+        class="mobile-image"
+      />
+      <h1 class="title">Make remote work</h1>
+      <p class="paragraph">
+        Get your team in sync, no matter your location. Streamline processes,
+        create team rituals, and watch productivity soar.
+      </p>
+      <button class="learn-more-btn">Learn More</button>
+      <div class="sponsor-section">
+        <img src="images/client-databiz.svg" alt="databiz" />
+        <img src="images/client-audiophile.svg" alt="audiophile" />
+        <img src="images/client-meet.svg" alt="meet" />
+        <img src="images/client-maker.svg" alt="maker" />
+      </div>
+    </div>
+    <div class="dropdown hide">
+      <div class="dropdown-content">
+        <a href="#"
+          ><img
+            src="images/icon-todo.svg"
+            alt="todo icon"
+            class="dropdown-icons"
+          />
+          List</a
+        >
+        <a href="#"
+          ><img
+            src="images/icon-calendar.svg"
+            alt="calender icon"
+            class="dropdown-icons"
+          />
+          Calender</a
+        >
+        <a href="#"
+          ><img
+            src="images/icon-reminders.svg"
+            alt="Reminders"
+            class="dropdown-icons"
+          />
+          Reminders</a
+        >
+        <a href="#"
+          ><img
+            src="images/icon-planning.svg"
+            alt="planning icon"
+            class="dropdown-icons"
+          />
+          Planning</a
+        >
+      </div>
+    </div>
+    <div class="company-dropdown hide">
+      <div class="company-dropdown-content">
+        <a href="">History</a>
+        <a href="">Our Team</a>
+        <a href="">Blog</a>
+      </div>
+    </div>
+  </body>
+</html>
